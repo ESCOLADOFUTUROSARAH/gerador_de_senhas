@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Personalizado</title>
+    <link rel="stylesheet" href="style.css"><!-- include CSS -->
+</head>
+<body>
+
+    <h1>Gerador de Senhas Personalizado</h1>
+    <form id="passwordGeneratorForm">
+        <label for="passwordLength">Número de caracteres por senha:</label>
+        <select id="passwordLength">
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8" selected>8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+            <option value="20">20</option>
+        </select>
+
+        <label for="useLetters">Incluir letras:</label>
+        <select id="useLetters">
+            <option value="yes" selected>Sim</option>
+            <option value="no">Não</option>
+        </select>
+
+        <label for="useNumbers">Incluir números:</label>
+        <select id="useNumbers">
+            <option value="yes" selected>Sim</option>
+            <option value="no">Não</option>
+        </select>
+
+        <label for="usePunctuation">Incluir potuação:</label>
+        <select id="usePunctuation">
+            <option value="yes">Sim</option>
+            <option value="no" selected>Não</option>
+        </select>
+
+        <label for="useSpecialCharacters">Incluir caracteres especiais:</label>
+        <select id="useSpecialCharacters">
+            <option value="yes">Sim</option>
+            <option value="no" selected>Não</option>
+        </select>
+
+        <label for="numberOfPasswords">Quantidade de senhas a gerar:</label>
+        <select id="numberOfPasswords">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+        </select>
+
+        <button type="button" id="generateButton">Gerar Senhas</button>
+    </form><!-- end of form -->
+
+    <table id="passwordTable" class="password-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Senha Gerada</th>
+            </tr>
+        </thead>
+        <tbody id="passwordOutput"></tbody>
+    </table><!-- end of table -->
+
+    <div id="paginationControls"></div>
+
+    <script src="script.js"></script><!-- include JS -->
+</body>
+</html>
